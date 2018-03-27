@@ -1,6 +1,19 @@
 <div class="container">
   <h3 class="first">Rooms</h3>
-  <p-dataTable [value]="rooms" selectionMode="single" [(selection)]="selectedRoom" data-key="roomNum">
-    <p-column *ngFor="let col of roomColumns" [field]="col.field" [header]="col.header"></p-column>
-  </p-dataTable>
+  <p-table [value]="rooms">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let room of roomColumns">
+          {{room.header}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-tenant>
+      <tr>
+        <td *ngFor="let room of roomColumns">
+          {{tenant[room.field]}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
 </div>

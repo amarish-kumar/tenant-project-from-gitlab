@@ -12,7 +12,7 @@ import { RoomDetailsService } from './room-details.service';
 
 import { RentAppModule } from './rent-app.module';
 
-import { DataTableModule } from 'primeng/datatable';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { DataTableModule } from 'primeng/datatable';
     BrowserModule,
     FormsModule,
     RentAppModule,
-    DataTableModule
+    TableModule
   ],
   providers: [
     RoomDetailsService
