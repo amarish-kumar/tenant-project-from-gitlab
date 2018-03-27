@@ -20,9 +20,15 @@ export class RoomDetailsService {
             room.roomNum = r.roomNum;
             if (r.roomNum && r.tenantName1) {
                 room.tenantName1 = r.tenantName1;
+                room.tenantName2 = r.tenantName2;
+                room.tenantName3 = r.tenantName3;
+                room.tenantName4 = r.tenantName4;
                 room.empty = 'No';
             } else {
-                room.tenantName1 = 'N.A.';
+                room.tenantName1 = null;
+                room.tenantName2 = null;
+                room.tenantName3 = null;
+                room.tenantName4 = null;
                 room.empty = 'Yes';
             }
             // if (r.tenantName1) {

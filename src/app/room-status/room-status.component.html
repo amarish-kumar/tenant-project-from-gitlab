@@ -1,6 +1,6 @@
 <div class="container">
   <h3 class="first">Rooms</h3>
-  <p-table [value]="rooms">
+  <p-table [value]="rooms" styleClass="table-borders" rowHover="true" responsive="true" columnResizeMode="expand" resizeableColumns="true">
     <ng-template pTemplate="header">
       <tr>
         <th *ngFor="let room of roomColumns">

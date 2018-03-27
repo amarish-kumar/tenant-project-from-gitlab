@@ -22,6 +22,9 @@ export class RoomStatusComponent implements OnInit {
     this.roomColumns = [
       { field: 'roomNum', header: 'RoomNumber' },
       { field: 'tenantName1', header: 'Tenant 1' },
+      { field: 'tenantName2', header: 'Tenant 2' },
+      { field: 'tenantName3', header: 'Tenant 3' },
+      { field: 'tenantName4', header: 'Tenant 4' },
       { field: 'empty', header: 'Room Empty?' }
     ];
   }
