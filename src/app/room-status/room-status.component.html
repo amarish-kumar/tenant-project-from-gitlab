@@ -1,0 +1,6 @@
+<div class="container">
+  <h3 class="first">Rooms</h3>
+  <p-dataTable [value]="rooms" selectionMode="single" [(selection)]="selectedRoom" data-key="roomNum">
+    <p-column *ngFor="let col of roomColumns" [field]="col.field" [header]="col.header"></p-column>
+  </p-dataTable>
+</div>
