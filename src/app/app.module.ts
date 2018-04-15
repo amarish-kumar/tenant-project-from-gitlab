@@ -8,11 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
+
 import { RoomDetailsService } from './room-details.service';
+import { DataBusService } from './data-bus.service';
 
 import { RentAppModule } from './rent-app.module';
 
 import { TableModule } from 'primeng/table';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -22,15 +25,17 @@ import { TableModule } from 'primeng/table';
     CheckInComponent,
     CheckOutComponent,
     RoomDetailsComponent
-  ],
+],
   imports: [
     BrowserModule,
     FormsModule,
     RentAppModule,
-    TableModule
+    TableModule,
+    CarouselModule
   ],
   providers: [
-    RoomDetailsService
+    RoomDetailsService,
+    DataBusService
   ],
   bootstrap: [
     AppComponent

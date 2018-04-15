@@ -1,6 +1,8 @@
 import { TenantStructure } from './../tenant-structure';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { DataBusService } from './../data-bus.service';
 import { RoomDetailsService } from '../room-details.service';
 
 @Component({
@@ -14,7 +16,9 @@ export class RoomStatusComponent implements OnInit {
   roomColumns: any[];
   selectedRoom: TenantStructure;
 
-  constructor( private roomService: RoomDetailsService ) { }
+  constructor( private roomService: RoomDetailsService,
+    private dataBusService: DataBusService,
+    private router: Router ) { }
 
   ngOnInit() {
     this.getRoomDetails();
@@ -31,7 +35,14 @@ export class RoomStatusComponent implements OnInit {
 
   getRoomDetails() {
     this.rooms = this.roomService.getRoomBasicDetails();
+    console.log(this.rooms);
     return this.rooms;
   }
 
+  selectedRoomDetails(room) {
+    console.log(room);
+    this.dataBusService.setData(room.roomNum, room);
+    this.dataBusService.selectedRoomNumber(room.roomNum);
+    this.router.navigateByUrl('/room-detail/' + room.roomNum);
+  }
 }

@@ -1,3 +1,31 @@
-<p>
-  room-details works!
-</p>
+<div>
+  <h1 class="first"></h1>
+  <p-carousel headerText="Tenant" [value]="cars">
+    <ng-template let-tenant pTemplate="item">
+      <div class="ui-grid ui-grid-responsive">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <h1>A</h1>
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">Vin</div>
+          <div class="ui-grid-col-6">{{car.vin}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">Year</div>
+          <div class="ui-grid-col-6">{{car.year}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">Color</div>
+          <div class="ui-grid-col-6">{{car.color}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <button type="button" pButton icon="fa-search" (click)="selectCar(car)"></button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
