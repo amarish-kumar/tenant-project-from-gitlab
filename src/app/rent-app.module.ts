@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RoomStatusComponent } from './room-status/room-status.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'room-status', component: RoomStatusComponent },
   { path: 'check-in', component: CheckInComponent },
   { path: 'check-out', component: CheckOutComponent },
