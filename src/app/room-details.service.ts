@@ -16,33 +16,24 @@ export class RoomDetailsService {
         const rooms: TenantStructure[] = [];
         let room: TenantStructure = new TenantStructure();
         this.getMockTenantData().forEach(r => {
-            // console.log(r);
             room.roomNum = r.roomNum;
-            if (r.roomNum && r.tenantName1) {
-                room.tenantName1 = r.tenantName1;
-                room.tenantName2 = r.tenantName2;
-                room.tenantName3 = r.tenantName3;
-                room.tenantName4 = r.tenantName4;
+            if (r.roomNum && r.tenant1) {
+                room.tenant1 = r.tenant1;
+                room.tenant2 = r.tenant2;
+                room.tenant3 = r.tenant3;
+                room.tenant4 = r.tenant4;
                 room.empty = 'No';
             } else {
-                room.tenantName1 = null;
-                room.tenantName2 = null;
-                room.tenantName3 = null;
-                room.tenantName4 = null;
+                room.tenant1 = null;
+                room.tenant2 = null;
+                room.tenant3 = null;
+                room.tenant4 = null;
                 room.empty = 'Yes';
             }
-            // if (r.tenantName1) {
-            //     room.tenantName1 = r.tenantName1;
-            //     room.empty = 'No';
-            // } else {
-            //     room.empty = 'Yes';
-            // }
-            console.log('ROoM:', room);
             rooms.push(room);
             room = new TenantStructure();
-            console.log('ROOMS', rooms);
         });
-        console.log(rooms);
+        console.log('ROOMS', rooms);
         return rooms;
     }
 
