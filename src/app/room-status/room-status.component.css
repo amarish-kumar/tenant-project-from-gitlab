@@ -1,10 +1,31 @@
 th,thead,tbody,tr,td {
-    border: 1px solid #ade;
+    border: 2px solid seagreen;
 }
 
-td{
+td {
     width: 175px;
 }
+
+td.tenant-field {
+    border: 2px solid maroon !important;
+}
+
+.no-left-border {
+    border-left: none;
+}
+
+.no-right-border {
+    border-right: none;
+}
+
+.no-bottom-border {
+    border-bottom: none;
+}
+
+.no-top-border {
+    border-top: none;
+}
+
 /* 
 .table-wrapper {
     position: relative;

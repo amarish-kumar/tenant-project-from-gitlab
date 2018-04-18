@@ -6,9 +6,12 @@ import { TenantStructure } from './tenant-structure';
 @Injectable()
 export class RoomDetailsService {
 
+    roomsAvailable: number[] = [];
+
     constructor() { }
 
     getMockTenantData() {
+        console.log(mockTenantData);
         return mockTenantData;
     }
 
@@ -35,6 +38,19 @@ export class RoomDetailsService {
         });
         console.log('ROOMS', rooms);
         return rooms;
+    }
+
+    getDetailsOfRoom(roomNumber) {
+        return this.getMockTenantData().find(room => room.roomNum = roomNumber);
+    }
+
+    getEmptyRooms() {
+        this.getMockTenantData().forEach(r => {
+            if (r.empty === 'Yes') {
+                this.roomsAvailable.push(r.roomNum);
+            }
+        });
+        return this.roomsAvailable;
     }
 
 }
