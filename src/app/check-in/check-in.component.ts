@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomDetailsService } from './../room-details.service';
 
 @Component({
   selector: 'app-check-in',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckInComponent implements OnInit {
 
-  constructor() { }
+  showBlock = true;
+  newTenant = false;
+  addTenant = false;
+  allRoomsList = [201, 202, 203, 204, 205, 301, 302, 303];
+  availableRoomsList: number[];
+  roomNum: number;
+  totalTenants: number;
+
+  constructor(private roomDetailsService: RoomDetailsService) { }
 
   ngOnInit() {
+    this.getDetailsNewTenant();
   }
 
+  getDetailsNewTenant() {
+    this.availableRoomsList =  this.roomDetailsService.getEmptyRooms();
+  }
+
+  getDetailsAddTenant() {
+  }
 }

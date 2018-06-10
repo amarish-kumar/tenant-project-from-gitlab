@@ -2,43 +2,67 @@ import { TenantStructure } from './tenant-structure';
 
 export const mockTenantData: TenantStructure[] = [
     {
-        roomNum: 201, tenantName1: '201-Name1', tenantName2: '201-Name2', tenantName3: null,
-        tenantName4: null, tenantNumber1: '201-1', tenantNumber2: '201-2', tenantNumber3: null,
-        tenantNumber4: null, advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 201,
+        tenant1: { name: '201-name1', number: '201-1' },
+        tenant2: { name: '201-name2', number: '201-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 202, tenantName1: '202-Name1', tenantName2: '202-Name2', tenantName3: '202-Name3',
-        tenantName4: null, tenantNumber1: '201-1', tenantNumber2: '201-2', tenantNumber3: '202-3',
-        tenantNumber4: null, advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 202,
+        tenant1: { name: '202-name1', number: '202-1' },
+        tenant2: { name: '202-name2', number: '202-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 203, tenantName1: '203-Name1', tenantName2: '203-Name2', tenantName3: '203-Name3',
-        tenantName4: null, tenantNumber1: '203-1', tenantNumber2: '203-2', tenantNumber3: '203-3',
-        tenantNumber4: null, advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 203,
+        tenant1: { name: '203-name1', number: '203-1' },
+        tenant2: { name: '203-name2', number: '203-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 204, tenantName1: '204-Name1', tenantName2: '204-Name2', tenantName3: '204-Name3',
-        tenantName4: '204-Name4', tenantNumber1: '201-1', tenantNumber2: '201-2', tenantNumber3: '202-3',
-        tenantNumber4: '204-4', advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 204,
+        tenant1: { name: '204-name1', number: '204-1' },
+        tenant2: { name: '204-name2', number: '204-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3200, rentAmount: 3200, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 205, tenantName1: null, tenantName2: null, tenantName3: null,
-        tenantName4: null, tenantNumber1: null, tenantNumber2: null, tenantNumber3: null,
-        tenantNumber4: null, advanceAmount: 0, rentAmount: 0, electricityBill: 0, miscAmount: 0, empty: 'Yes'
+        roomNum: 205,
+        tenant1: { name: '205-name1', number: '205-1' },
+        tenant2: { name: '205-name2', number: '205-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 0, rentAmount: 0, electricityBill: 0, miscAmount: 0, empty: 'Yes'
     },
     {
-        roomNum: 301, tenantName1: '301-Name1', tenantName2: null, tenantName3: null,
-        tenantName4: null, tenantNumber1: '301-1', tenantNumber2: null, tenantNumber3: null,
-        tenantNumber4: null, advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 301,
+        tenant1: { name: '301-name1', number: '301-1' },
+        tenant2: { name: '301-name2', number: '301-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 302, tenantName1: '302-Name1', tenantName2: '302-Name2', tenantName3: null,
-        tenantName4: null, tenantNumber1: '302-1', tenantNumber2: '302-2', tenantNumber3: null,
-        tenantNumber4: null, advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 302,
+        tenant1: { name: '302-name1', number: '302-1' },
+        tenant2: { name: '302-name2', number: '302-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
     },
     {
-        roomNum: 303, tenantName1: '303-Name1', tenantName2: '303-Name2', tenantName3: null,
-        tenantName4: null, tenantNumber1: '303-1', tenantNumber2: '303-2', tenantNumber3: null,
-        tenantNumber4: null, advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
+        roomNum: 303,
+        tenant1: { name: '303-name1', number: '303-1' },
+        tenant2: { name: '303-name2', number: '303-2' },
+        tenant3: { name: null, number: null },
+        tenant4: { name: null, number: null },
+        advanceAmount: 3000, rentAmount: 3000, electricityBill: 0, miscAmount: 0, empty: 'No'
     }
 ];

@@ -1,3 +1,32 @@
-<p>
-  check-in works!
-</p>
+<div>
+  <table align="center" *ngIf="showBlock">
+    <tr>
+      <th><button (click)="newTenant = true; showBlock = false">New Check-In</button></th>
+      <th><button (click)="addTenant = true; showBlock = false">Add Tenant</button></th>
+    </tr>
+  </table>
+  <table align="center" *ngIf="newTenant">
+    <th>Room Number</th>
+    <td>
+      <select [(ngModel)]="roomNum">
+        <option *ngFor="let roomNo of availableRoomsList" [value]="roomNo">{{roomNo}}</option>
+      </select>
+    </td>
+    <td *ngIf="roomNo">
+      <input type="radio" value="1" [(ngModel)]="totalTenants">
+      <input type="radio" value="2" [(ngModel)]="totalTenants">
+      <input type="radio" value="3" [(ngModel)]="totalTenants">
+    </td>
+    <td *ngIf="totalTenants">
+      <tr>
+        <td>Ajitesh</td>
+        <td>Newnaha</td>
+      </tr>
+      <tr>
+        <td>Ritika</td>
+        <td>Newnaha</td>
+      </tr>
+    </td>
+  </table>
+  
+</div>
